@@ -4,12 +4,16 @@ import {BrowserRouter as Router, Link, Routes, Route} from 'react-router-dom';
 import Home from './component/home';
 import About from './component/about';
 import Contact from './component/contact';
+import HooksComponent from './component/hookscomponent';
 
 class App extends React.Component {
   render() {
     return (
       <Router>
         <div className='App'>
+          <header>
+            <HooksComponent />
+          </header>
           <ul className='App-header'>
             <li>
               <Link to = "/home">Home</Link>
@@ -26,6 +30,7 @@ class App extends React.Component {
             <Route exact path='/home' element={<Home />} />
             <Route exact path='/about' element={<About />} />
             <Route exact path='/contact' element={<Contact />} />
+           
           </Routes>
         </div>
       </Router>
