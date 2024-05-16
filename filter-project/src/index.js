@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import FilterableProductTable from './App';
+import {Clock,FilterableProductTable} from './App';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -24,9 +24,13 @@ root.render(
 
 ReactDOM.render(
   <React.StrictMode>
+    <div>
+    <Clock />
     <FilterableProductTable products={PRODUCTS} />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 
 reportWebVitals();
